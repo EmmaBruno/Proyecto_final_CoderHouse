@@ -1,0 +1,17 @@
+// Base
+@import "base/reset", "base/colors", "base/typo";
+
+// Layout
+@import "layout/nav", "layout/hero", "layout/content", 'layout/footer', 'layout/portfolio', 'layout/contacto';
+
+
+body {
+    background-color: $white;
+    position: relative;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}

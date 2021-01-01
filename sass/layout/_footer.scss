@@ -1,0 +1,24 @@
+footer {
+
+                background: $primary;
+                padding: 1rem 0;
+                border-top: 0.15rem solid $black;
+}
+
+footer .contenedor {
+        color: $black;
+        display: flex;
+                justify-content: space-between;
+
+}
+
+.footer {
+        display: flex;
+                flex-direction: column;
+        background: $primary;
+        text-align: center;
+}
+
+.footer__sm a {
+        font-size: 2rem;
+}

@@ -1,0 +1,455 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla&family=Spectral:ital,wght@0,700;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  color: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  font-family: "Spectral", serif;
+  font-style: italic;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.8em;
+}
+
+a {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+span {
+  color: #B54D98;
+}
+
+span.copy {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  z-index: 1;
+  position: relative;
+}
+span.copy::before {
+  position: absolute;
+  bottom: 0.1em;
+  left: -0.2em;
+  z-index: -1;
+  content: "";
+  height: 0.4em;
+  width: 80%;
+  background: #B54D98;
+}
+
+@media only screen and (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 2.6em;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  html {
+    font-size: 20px;
+  }
+
+  h1 {
+    font-size: 3em;
+  }
+}
+header {
+  background: #e2abeb;
+  padding: 1rem 0;
+  border-bottom: 0.15rem solid #202b35;
+  position: -webkit-sticky;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+header .contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header ul {
+  display: flex;
+}
+
+header ul li {
+  margin-left: 2rem;
+}
+
+header ul li a {
+  color: #202b35;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+header ul li a:hover {
+  color: #f1f1f1;
+}
+
+.icon {
+  display: none;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  header nav {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    width: 80%;
+    height: 100vh;
+    background: #e2abeb;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+    transition: left 0.5s;
+  }
+
+  #menu:target {
+    left: 0;
+  }
+
+  .icon {
+    display: block;
+  }
+
+  .icon_img {
+    width: 3rem;
+  }
+
+  .close {
+    position: absolute;
+    left: 2rem;
+    top: 2rem;
+  }
+
+  header ul {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header ul li {
+    margin: 1.5rem 0;
+  }
+
+  header ul li a {
+    font-size: 2rem;
+  }
+}
+.hero {
+  position: relative;
+  background: url("../multimedia/fotos_img/hero.jpg") no-repeat 50% 100%;
+  background-size: cover;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+.hero__txt {
+  margin-top: 70%;
+  text-align: center;
+}
+.hero__txt--cursos {
+  margin-top: 95%;
+}
+.hero__title {
+  color: #202b35;
+  font-size: 3rem;
+  max-width: 13rem;
+  margin-bottom: 0.5em;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+.card__img {
+  height: 230px;
+}
+.card .intro {
+  background: url("../multimedia/fotos_img/studio2_square.jpg") no-repeat center;
+  background-size: cover;
+}
+.card .review_1 {
+  background: url("../multimedia/fotos_img/colors2_square.jpg") no-repeat center;
+  background-size: cover;
+}
+.card .review_2 {
+  background: url("../multimedia/fotos_img/studio4_square.jpg") no-repeat center;
+  background-size: cover;
+}
+.card .review_3 {
+  background: url("../multimedia/fotos_img/mascarade4_square.jpg") no-repeat center;
+  background-size: cover;
+}
+.card .review_4 {
+  background: url("../multimedia/fotos_img/studio12_square.jpg") no-repeat center;
+  background-size: cover;
+}
+.card .about_me {
+  background: url("../multimedia/fotos_img/studio9_square.jpg") no-repeat center;
+  background-size: cover;
+  margin: 1rem;
+}
+.card .curso_1 {
+  background: url("../multimedia/fotos_img/studio12.jpg") no-repeat center;
+  background-size: cover;
+  margin: 1rem;
+}
+.card__txt {
+  padding: 1em;
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+.card__txt h2 {
+  margin-bottom: 0.4em;
+}
+.card__txt p {
+  max-width: 75%;
+  margin: 0 auto;
+  margin-bottom: 1em;
+}
+.card__txt a {
+  display: block;
+  place-self: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.6em 0.8em;
+  background: #e2abeb;
+  border-radius: 0.3em;
+  border: solid #202b35 2px;
+}
+.card__txt a:hover {
+  background: #B54D98;
+}
+
+@media only screen and (min-width: 768px) {
+  .card {
+    display: flex;
+    flex-direction: row;
+  }
+  .card .curso_1 {
+    background: url("../multimedia/fotos_img/studio12.jpg") no-repeat center;
+    background-size: cover;
+    margin-top: 4.5rem;
+  }
+  .card .about_me {
+    background: url("../multimedia/fotos_img/studio9_square.jpg") no-repeat center;
+    background-size: cover;
+    margin-top: 4.3rem;
+  }
+  .card__img {
+    width: 50%;
+  }
+  .card__txt {
+    width: 50%;
+  }
+
+  .card--reverse {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .card .curso_1 {
+    background: url("../multimedia/fotos_img/studio12.jpg") no-repeat center;
+    background-size: cover;
+    margin-top: 1.5rem;
+  }
+  .card .about_me {
+    background: url("../multimedia/fotos_img/studio9_square.jpg") no-repeat center;
+    background-size: cover;
+    margin-top: 1.3rem;
+  }
+  .card__img {
+    width: 50%;
+    height: 300px;
+  }
+  .card__txt {
+    width: 50%;
+  }
+}
+footer {
+  background: #e2abeb;
+  padding: 1rem 0;
+  border-top: 0.15rem solid #202b35;
+}
+
+footer .contenedor {
+  color: #202b35;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background: #e2abeb;
+  text-align: center;
+}
+
+.footer__sm a {
+  font-size: 2rem;
+}
+
+.grid_container {
+  width: auto;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr;
+  grid-template-areas: "img1 img2 img4" "img3 img3 img4";
+}
+
+.img1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  background: url(../multimedia/fotos_img/victorian2.jpg);
+  background-size: cover;
+  background-position: 50% 15%;
+  grid-area: img2;
+}
+
+.img2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  background: url(../multimedia/fotos_img/studio1.jpg);
+  background-size: cover;
+  background-position: 30% 15%;
+  grid-area: img1;
+}
+
+.img3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  background: url(../multimedia/fotos_img/street1.jpg);
+  background-size: cover;
+  grid-area: img3;
+}
+
+.img4 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  background: url(../multimedia/fotos_img/mascarade2.jpg);
+  background-size: cover;
+  background-position: 50%;
+  grid-area: img4;
+}
+
+@media screen and (max-width: 768px) {
+  .img2 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    background: url(../multimedia/fotos_img/studio1.jpg);
+    background-size: cover;
+    background-position: 60% 15%;
+    grid-area: img1;
+  }
+}
+.contacto {
+  display: flex;
+  flex-direction: column;
+}
+.contacto__txt {
+  text-align: center;
+  margin: 1rem;
+}
+.contacto__form {
+  margin-left: 25%;
+  margin-bottom: 1rem;
+}
+
+.formbox {
+  display: block;
+}
+
+.btn {
+  font-family: "Spectral", serif;
+  font-style: italic;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  display: block;
+  place-self: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.6em 0.8em;
+  background: #e2abeb;
+  border-radius: 0.3em;
+}
+.btn:hover {
+  background: #B54D98;
+}
+
+@media only screen and (min-width: 768px) {
+  .contacto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .contacto__form {
+    margin-top: 5%;
+    min-width: 30%;
+  }
+
+  .formbox {
+    display: block;
+    width: 100%;
+  }
+}
+body {
+  background-color: #f1f1f1;
+  position: relative;
+}
+
+.contenedor {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}

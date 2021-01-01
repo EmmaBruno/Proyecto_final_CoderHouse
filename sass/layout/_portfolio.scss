@@ -1,0 +1,56 @@
+.grid_container {
+    width: auto;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas: "img1 img2 img4" "img3 img3 img4";
+  }
+  
+  .img1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    background: url(../multimedia/fotos_img/victorian2.jpg);
+    background-size: cover;
+    background-position: 50% 15%;
+    grid-area: img2;
+  }
+  
+  .img2 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    background: url(../multimedia/fotos_img/studio1.jpg);
+    background-size: cover;
+    background-position: 30% 15%;
+    grid-area: img1;
+  }
+  
+  .img3 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    background: url(../multimedia/fotos_img/street1.jpg);
+    background-size: cover;
+    grid-area: img3;
+  }
+  
+  .img4 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 3;
+    background: url(../multimedia/fotos_img/mascarade2.jpg);
+    background-size: cover;
+    background-position: 50%;
+    grid-area: img4;
+  }
+
+  @media screen and (max-width: 768px) {
+    .img2 {
+      -ms-grid-row: 1;
+      -ms-grid-column: 1;
+      background: url(../multimedia/fotos_img/studio1.jpg);
+      background-size: cover;
+      background-position: 60% 15%;
+      grid-area: img1;
+    }
+  }

@@ -1,0 +1,145 @@
+.card {
+    display: flex;
+        flex-direction: column;
+
+    &__img {
+        height: 230px;
+
+    }
+
+    .intro {
+        background: url("../multimedia/fotos_img/studio2_square.jpg") no-repeat center;
+        background-size: cover;
+    }
+
+    .review_1 {
+        background: url("../multimedia/fotos_img/colors2_square.jpg") no-repeat center;
+        background-size: cover;
+
+    }
+
+    .review_2 {
+        background: url("../multimedia/fotos_img/studio4_square.jpg") no-repeat center;
+        background-size: cover;
+
+    }
+
+    .review_3 {
+        background: url("../multimedia/fotos_img/mascarade4_square.jpg") no-repeat center;
+        background-size: cover;
+
+    }
+
+    .review_4 {
+        background: url("../multimedia/fotos_img/studio12_square.jpg") no-repeat center;
+        background-size: cover;
+
+    }
+
+    .about_me {
+        background: url("../multimedia/fotos_img/studio9_square.jpg") no-repeat center;
+        background-size: cover;
+        margin: 1rem;
+    }
+
+    .curso_1 {
+        background: url("../multimedia/fotos_img/studio12.jpg") no-repeat center;
+        background-size: cover;
+        margin: 1rem;
+
+    }
+
+    &__txt {
+        padding: 1em;
+        display: grid;
+            place-content: center;
+        text-align: center;
+
+        h2 {
+            margin-bottom: .4em;
+        }
+
+        p {
+
+            max-width: 75%;
+            margin: 0 auto;
+            margin-bottom: 1em;
+        }
+
+        a {
+            display: block;
+                place-self: center;
+            width: fit-content;
+            padding: .6em .8em;
+            background: $primary;
+            border-radius: .3em;
+            border: solid $black 2px;
+
+            &:hover {
+                background: $accent;
+            }
+
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .card {
+        display: flex;
+            flex-direction: row;
+
+            .curso_1 {
+                background: url("../multimedia/fotos_img/studio12.jpg") no-repeat center;
+                background-size: cover;
+                margin-top:  4.5rem;
+            }
+
+            .about_me {
+                background: url("../multimedia/fotos_img/studio9_square.jpg") no-repeat center;
+                background-size: cover;
+                margin-top: 4.3rem;
+            }
+        
+
+            &__img {
+                width: 50%;
+            }
+
+            &__txt {
+                width: 50%;
+            }
+    }
+
+    .card--reverse {
+        display: flex;
+            flex-direction: row-reverse;
+    }
+
+
+}
+
+@media only screen and (min-width: 1024px) {
+    .card {     
+
+            .curso_1 {
+            background: url("../multimedia/fotos_img/studio12.jpg") no-repeat center;
+            background-size: cover;
+            margin-top:  1.5rem;
+            }
+
+            .about_me {
+            background: url("../multimedia/fotos_img/studio9_square.jpg") no-repeat center;
+            background-size: cover;
+            margin-top: 1.3rem;
+            }
+
+            &__img {
+                width: 50%;
+                height: 300px;
+            }
+
+            &__txt {
+                width: 50%;
+            }
+    }
+}
